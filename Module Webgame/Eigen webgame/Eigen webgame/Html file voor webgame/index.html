@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Made by Jason</title>
+</head>
+
+<body>
+
+    <div class="startButton" id="startButton" onclick="showOptions()" role="button">Start Game</div>
+    <div id="options" style="display: none;">
+        <p>Select the number of cards:</p>
+        <div onclick="startGame(12)" class="option">12 Cards</div>
+        <div onclick="startGame(16)" class="option">16 Cards</div>
+        <div onclick="startGame(32)" class="option">32 Cards</div>
+    </div>
+    <div id="board" class="board-container"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

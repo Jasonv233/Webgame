@@ -1,0 +1,239 @@
+body {
+  margin: 10;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #773333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+#timer {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f1f1f3;
+}
+
+.board-container {
+  display: grid;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #080202;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .board-container {
+      grid-template-columns: repeat(2, minmax(80px, 1fr));
+  }
+}
+
+@media (min-width: 800px) {
+  .board-container {
+      grid-template-columns: repeat(3, minmax(80px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .board-container {
+      grid-template-columns: repeat(4, minmax(80px, 1fr));
+  }
+}
+
+.startButton {
+  align-items: center;
+  background-color: #f1f1f3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px;
+}
+
+.startButton:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.startButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.startButton:active {
+  background-color: #f5f2f2;
+  outline: 0;
+}
+
+.startButton:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+      padding: 0 40px;
+  }
+}
+
+.option {
+  background-color: #f1f1f3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.option:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.option:hover:after {
+  transform: translate(0, 0);
+}
+
+.option:active {
+  background-color: #f5f2f2;
+  outline: 0;
+}
+
+.option:hover {
+  outline: 0;
+}
+
+/* Add these styles for the reset and pause buttons */
+.resetButton {
+  background-color: #f1f1f3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.resetButton:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.resetButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.resetButton:active {
+  background-color: #f5f2f2;
+  outline: 0;
+}
+
+.resetButton:hover {
+  outline: 0;
+}
+
+/* Style for the pause button */
+#pauseButton {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* Style for the reset button */
+#resetButton {
+  margin-left: 10px; /* Adjust the margin as needed */
+}
